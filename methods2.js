@@ -8,7 +8,6 @@ const Person = {
     alive: true,
     increaseAge() {
         this.age = this.age + 1;
-        // death()
     },
 }
 
@@ -38,7 +37,7 @@ SomeObject.someMethod();
 //     bark();
 // }
 
-// a na niżej jedno z możliwych rozwiązań;
+// a poniżej jedno z możliwych rozwiązań;
 // const deadAge = 35;
 
 // const SomePerson = {
@@ -58,7 +57,10 @@ SomeObject.someMethod();
 // }
 
 // SomePerson.increaseAge();
+// console.log("Is he alive? ", SomePerson.alive);
 // SomePerson.increaseAge();
+// console.log("Is he alive? ", SomePerson.alive);
 // SomePerson.increaseAge();
+// console.log("Is he alive? ", SomePerson.alive);
 // SomePerson.increaseAge();
 // console.log("Is he alive? ", SomePerson.alive);

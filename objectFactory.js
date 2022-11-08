@@ -3,7 +3,7 @@
  * Czy umiesz przerobić mój kod tak, aby:
  * - metoda increaseAge podbijała wiek
  * - metoda death uśmiercała osobę po osiągnięciu wieku 33 lat,
- * - zanim zaczniesz kodować, spojrz poniżej metody na następny komentarz z dalszymi wymogami
+ * - zanim zaczniesz kodować, spojrz poniżej na następny komentarz z dalszymi wymogami
  */
 
 const personFactory = () => {
@@ -31,7 +31,9 @@ const olaPerson = personFactory("ola", 18);
 const korkaPerson = personFactory("korka", 18);
 const maciekPerson = personFactory("maciek", 32);
 
+olaPerson.increaseAge() // jeden raz nie wystarczy!
+
 // Jak się za to zabrać?
-// najpierw pójdź do metody personFactor i dodaj do niej parametry, np. tak: 
+// najpierw pójdź do metody personFactor i dodaj do niej parametry, np. tak (ale nazwij je odpowiednio): 
 // const someMethod = (paramA, paramB) => {...};
 // z resztą sobie poradzisz! :D 

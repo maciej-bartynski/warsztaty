@@ -1,5 +1,5 @@
 /** 
- * 1. Znowu popracujemy na obiekcie stworzonym przeze mnie, oto on:
+ * Znowu popracujemy na obiekcie stworzonym przeze mnie, oto on:
  */
 
 const myName = "Maciek";

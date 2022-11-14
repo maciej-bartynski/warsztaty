@@ -4,25 +4,40 @@
 
 const Person = {
     name: 'Maciek', 
-    age: 32,
+    age: 36,
     alive: true,
     increaseAge() {
         this.age = this.age + 1;
+        this.death();
     },
-}
-
-// Czy wiesz, że wewnątrz metod można wywoływać inne metody?
-const SomeObject = {
-    someField: 'foo',
-    someMethod() { 
-        this.otherMethod(); 
-        console.log(this.someField);
-    },
-    otherMethod() {
-        this.someField = 'yay!'
+    death() {
+        this.alive = false;
     }
 }
-SomeObject.someMethod();
+
+// const death = () => {
+//     alive = false;
+// }
+
+
+if (Person.age > 35) {
+    Person.death()
+}
+
+console.log(Person.alive)
+
+// Czy wiesz, że wewnątrz metod można wywoływać inne metody?
+// const SomeObject = {
+//     someField: 'foo',
+//     someMethod() { 
+//         this.otherMethod(); 
+//         console.log(this.someField);
+//     },
+//     otherMethod() {
+//         this.someField = 'yay!'
+//     }
+// }
+// SomeObject.someMethod();
 
 // Teraz weź obiekt Person, i dodaj do niego metodę death() w następujących krokach
 // 1. metoda death powinna zmieniać pole alive z true na false;
@@ -36,6 +51,22 @@ SomeObject.someMethod();
 // if (someNumber > 15) {
 //     bark();
 // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // a poniżej jedno z możliwych rozwiązań;
 // const deadAge = 35;

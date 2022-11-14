@@ -13,10 +13,30 @@
  * Gdy zadziała, zmień let na const i wywołaj jeszcze raz. Zobacz co się stanie.
  */
 
+// CZ 1
+const name1 = "Karolina";
+let surname1 = "Dyrda"; // moze kiedys bede zona i bede miec dwa nazwiska?
+let age1 = 30; // bo latka mijaja, ID byloby lepsze?
 
+console.log(name1, surname1, age1);
+console.log(`Hej tutaj ${name1} ${surname1}, mam teraz ${age1} lat`);
 
+// ✨ CZ 2 ✨
+const name2 = "Karolina";
+let surname2 = "Dyrda";
+let age2 = 30;
+let alive = true;
 
+console.log(`${name2} ${surname2} w wieku ${age2} lat zyje`, alive);
 
+const kill = () => {
+    alive = false;
+    console.log("Jeśli false to działa", alive);
+}
+
+kill();
+
+console.log(`${name2} ${surname2} w wieku 99 lat zyje`, alive);
 
 
 

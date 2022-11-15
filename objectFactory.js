@@ -13,14 +13,13 @@ const personFactory = (name, age) => {
         alive: true,
         increaseAge() {
             this.age = this.age + 1;
+            this.death();
         },
         death() {
+            if (this.age > 32) {
             this.alive = false;
+            }
         }
-    }
-
-    if (Person.age > 30) {
-        Person.death();
     }
 
     return Person;

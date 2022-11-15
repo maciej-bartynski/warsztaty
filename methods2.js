@@ -4,10 +4,12 @@
 
 const Person = {
     name: 'Maciek', 
-    age: 36,
+    age: 34,
     alive: true,
     increaseAge() {
+        console.log("Initial age", this.age);
         this.age = this.age + 1;
+        console.log("increased age", this.age);
         this.death();
     },
     death() {
@@ -15,16 +17,12 @@ const Person = {
     }
 }
 
-// const death = () => {
-//     alive = false;
-// }
-
-
 if (Person.age > 35) {
-    Person.death()
+    Person.death();
 }
+// Person.increaseAge();
 
-console.log(Person.alive)
+console.log("Is Person alive?", Person.alive);
 
 // Czy wiesz, że wewnątrz metod można wywoływać inne metody?
 // const SomeObject = {

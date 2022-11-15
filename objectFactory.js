@@ -6,17 +6,21 @@
  * - zanim zaczniesz kodować, spojrz poniżej na następny komentarz z dalszymi wymogami
  */
 
-const personFactory = () => {
+const personFactory = (name, age) => {
     const Person = {
-        name: "maciek",
-        age: 32,
+        name,
+        age,
         alive: true,
         increaseAge() {
-
+            this.age = this.age + 1;
         },
         death() {
-
+            this.alive = false;
         }
+    }
+
+    if (Person.age > 30) {
+        Person.death();
     }
 
     return Person;
@@ -31,7 +35,8 @@ const olaPerson = personFactory("ola", 18);
 const korkaPerson = personFactory("korka", 18);
 const maciekPerson = personFactory("maciek", 32);
 
-olaPerson.increaseAge() // jeden raz nie wystarczy!
+olaPerson.increaseAge(); // jeden raz nie wystarczy!
+console.log(olaPerson, korkaPerson, maciekPerson);
 
 // Jak się za to zabrać?
 // najpierw pójdź do metody personFactor i dodaj do niej parametry, np. tak (ale nazwij je odpowiednio): 

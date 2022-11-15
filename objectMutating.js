@@ -4,17 +4,21 @@
 
 const myName = "Maciek";
 const surname = "Paciek";
-const age = 32;
+let age = 32;
 
 const Person = {
-    name: myName,
+    name: "Maciek",
     surname,
     alive: true,
-    age: 32,
+    age: 32, // czy ten zapis jest poprawny?
     getAge() {
-        console.log(this.age);
+        console.log("Initial value", this.age);
+        this.age = this.age + 1;
+        console.log("Increased value", this.age);
     }
 }
+
+Person.getAge(); // const dla age rowniez dziala :o
 
 // Zrefaktoruj go tak, aby każde wywołanie "getAge", podbiło wiek o jeden rok.
 // Pod spodem przedstawiam podpowiedź, którą możesz odkomentować i wywołać. Po wywołaniu, wróć do tego komentarza
@@ -57,16 +61,17 @@ const Person = {
 // chcę zwrócić twoją uwagę na jeszcze jedną rzecz (poniżej przykład z gwiazdką). Jeśli zdefiniujemy obiekt w taki sposób
 // jak poniżej, to jak myślisz, czy zmiany oryginalnej zmiennej "someNumber" będą wpływać na 
 // pole "someNumber"? Odkomentuj i sprawdź:
-// let someNumber = 0;
-// const SomeData = {
-//     someNumber,
-//     increase() {
-//         this.someNumber = this.someNumber + 1;
-//     }
-// }
-// SomeData.increase();
-// someNumber = someNumber + 1;
-// SomeData.increase();
-// SomeData.increase();
-// console.log("SomeData.someNumber: ", someNumber)
-// console.log("let someNumber: ", someNumber)
+let someNumber = 0;
+const SomeData = {
+    someNumber,
+    increase() {
+        this.someNumber = this.someNumber + 1;
+    }
+}
+SomeData.increase();
+someNumber = someNumber + 1;
+SomeData.increase();
+SomeData.increase();
+console.log("SomeData.someNumber: ", someNumber)
+console.log("let someNumber: ", someNumber)
+// nie beda miec wplywu bo zmiany dla obiektu dzieja sie wewnatrz niego?

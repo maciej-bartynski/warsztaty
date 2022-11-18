@@ -294,7 +294,7 @@ Person.children[0].computerBannedForWeekBecauseChildPlayedWithKnife = true;
 // odpowiadam:
 
 // TRZY WSKAŹNIKI: pierwszy wskaźnik to sam obiekt Person, drugi wskaźnik to obiekt Child, a trzeci wskaźnik to
-// pole Pole.children, które też jest przecież zagnieżdżonym obiektem! Dobre, nie? Popatrz na to:
+// pole Person.children, które też jest przecież zagnieżdżonym obiektem! Dobre, nie? Popatrz na to:
 
 /**
 const pointerToPerson = Person;

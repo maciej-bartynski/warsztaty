@@ -228,7 +228,7 @@ console.log("testObject.myFunction === functionClone", testObject.myFunction ===
 */
 
 // Widzisz? Powyżej nasza funkcja "JEST WSKAZYWANA" aż przez trzy wskaźniki: functionClone, myFunction, testObject.myFunction
-// Tylko raz użyliśmy syntaksu "funciton literal", a potem "rozpropagowaliśmy" na tę funkcję. 
+// Tylko raz użyliśmy syntaksu "funciton literal", a potem "rozpropagowaliśmy" tę funkcję do aż 3 zmiennych (dwa consty i jedno pole obiektu). 
 // Takie działanie ma swoje konsekwencje. Poniżej przedstawię ci coś, co naprawdę rozwali ci umysł.
 // Zanim jednak do tego przejdziemy, zakomentuj wszystkie console.logi powyżej, żeby nam nie wchodziły w paradę.
 // Zakomentowane? To czytaj dalej.

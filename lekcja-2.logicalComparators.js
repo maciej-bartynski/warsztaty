@@ -260,7 +260,7 @@ Person.children.push(Child);
 // A teraz przypuścmy, że ten dziwny adoptowany malec postanowił zrobić sobie krzywdę:
 Child.injured = true;
 // Sprawdźmy, czy się udało (odkomentuj):
-// console.log("Child", Child.injured);
+// console.log("Child", Child);
 
 // Ale ale... przecież nie tylko zmienna "Child" nam wskazuje na tego malca, bo teraz 
 // wskaźnik siedzi także w mojej tablicy dzieci! Znajdźmy ten wskaźnik (odkomentuj)!

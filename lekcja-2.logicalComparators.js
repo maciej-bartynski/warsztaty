@@ -458,11 +458,12 @@ const whatName = (childEyes, childGender) => {
 
 // Oto twoje zdanie:
 
-// napisz własny program do poniższego zdania:
+// Otrzymasz zdanie w języku ludzi i napiszesz do niego program. Tak nparawdę, program jest już 
+// trochę napisany. Twoim zadaniem będzie tak go poprawić, żeby działał. Oto więc zdanie:
 // "Jan nazywa się Kowalski, a Małgosia nazywa się Nowak. Jeśli urodzi im się syn, o oczach ojca,
 // to będzie nazywać się Kowalski, a jeśli o oczach matki, to będzie nazywać się Nowak. Jeśli urodzi
 // im się córka, o oczach matki, bo będzie nazywaś się Nowak, ale jeśli o oczach ojca, to będzie nazywać się Nowak-Kowalski." 
-
+// A oto instrukcja jak poprawić program, który jest poniżej;
 // Twoim zadaniem jest tak uzupełnić ciało funkcji "resolveSurname", żeby console.logi 
 // na samym dole (odkomentuj je od razu) pokazywały poprawne wartości TRUE.
 // Nie edytu samych console.logów ani obiektów mother, father ani templatek obiektu dziecko. Po prostu uzupełnij funkcję

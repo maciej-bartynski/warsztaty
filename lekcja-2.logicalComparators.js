@@ -224,7 +224,7 @@ const testObject = {
     myFunction
 }
 console.log("testObject.myFunction === myFunction", testObject.myFunction === myFunction);
-console.log("testObject.myFunction === myFunction", testObject.myFunction === functionClone);
+console.log("testObject.myFunction === functionClone", testObject.myFunction === functionClone);
 */
 
 // Widzisz? Powyżej nasza funkcja "JEST WSKAZYWANA" aż przez trzy wskaźniki: functionClone, myFunction, testObject.myFunction

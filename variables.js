@@ -2,30 +2,36 @@
  * Stwórz zmienne trzymające twoje dane personalne: imię, nazwisko, wiek.
  * Zastanów się, czy używasz var, let czy const. Zastanów się czemu.
  * Użyj console.log() aby wywołać te wszystkie zmienne.
- * 
+ *
  * Na samym dole strony są rozwiązania (zakomentowane). Możesz je odkomentować by popatrzyć jak to działa.
- * 
+ *
  * Dalsza część z gwiazdką:
- * Do swoich zmiennych, dodaj jeszcze jedną; stwórz zmienną o nazwie "alive" równą true, 
- * tak, aby dało się ją edytować. Pod spodem stwórz funkcję strzałkową o nazwie "kill", 
+ * Do swoich zmiennych, dodaj jeszcze jedną; stwórz zmienną o nazwie "alive" równą true,
+ * tak, aby dało się ją edytować. Pod spodem stwórz funkcję strzałkową o nazwie "kill",
  * która nie przyjmuje żadnych parametrów. Niech ta funkcja w chwili wywołania, zmieni "alive" na false.
  * Wywołaj skrypt, sprawdź czy działa.
  * Gdy zadziała, zmień let na const i wywołaj jeszcze raz. Zobacz co się stanie.
  */
 
+//Oli rozwiązania
+const name = "Ola";
+const surname = "Bratkwoska"; // const, bo moje dane nie powinny się zmieniać
+const age = 29; //Zastanawiam się czy mozna uzyc let,bo wiek się zmienia co roku
 
+console.log(name);
+console.log(surname);
+console.log(age);
 
+let alive = true;
+console.log("What value has alive variable:", alive);
 
+const kill = () => {
+  console.log("Check variables:", alive);
+  alive = false;
+};
 
-
-
-
-
-
-
-
-
-
+kill();
+console.log("Change variables to false:", alive);
 
 /** Rozwiązania:
 
@@ -42,7 +48,6 @@ console.log(`My name is ${myName} and I'm ${myAge}`);
 
 */
 
-
 /**
  * A to ta część z gwiazdką. Zanim odpalisz skrypt, jak myślisz, jakie będą
  * wartości poszczególnych console.logów?
@@ -51,11 +56,9 @@ let alive = true;
 console.log("Below declaration", alive);
 
 const kill = () => {
-    console.log("Inside function body", alive)
-    alive = false;
-}
+  console.log("Inside function body", alive);
+  alive = false;
+};
 kill();
-console.log("After function call", alive)
-
+console.log("After function call", alive);
 */
-

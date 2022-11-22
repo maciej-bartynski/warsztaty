@@ -20,7 +20,7 @@ Person.age = age;
 
 // Rozwiązanie poniżej.
 
-Person.getAge = function getAge () { // czy tu moze byc 'function'?
+Person.getAge = function () {
     console.log(this.age);
 }
 

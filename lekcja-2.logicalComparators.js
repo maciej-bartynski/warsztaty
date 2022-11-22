@@ -11,23 +11,23 @@ const areEqual = 1 === 2; // funkcją jest w tym przykładzie znak "potrójnego 
 // i w tym przypadku będzie on równy "false"
 
 // Mamy takie komparatory:
-const equal = 1 === 2;
-console.log(equal) // false;
+// const equal = 1 === 2;
+// console.log(equal) // false;
 
-const notEqual = 1 !== 2;
-console.log(notEqual) // true;
+// const notEqual = 1 !== 2;
+// console.log(notEqual) // true;
 
-const lesserThan = 1 < 2;
-console.log(lesserThan) // true;
+// const lesserThan = 1 < 2;
+// console.log(lesserThan) // true;
 
-const greaterThan = 1 > 2;
-console.log(greaterThan) // false;
+// const greaterThan = 1 > 2;
+// console.log(greaterThan) // false;
 
-const lesserOrEqual = 1 <= 2;
-console.log(lesserOrEqual) // true;
+// const lesserOrEqual = 1 <= 2;
+// console.log(lesserOrEqual) // true;
 
-const greaterOrEqual = 2 >= 2;
-console.log(greaterOrEqual) // true;
+// const greaterOrEqual = 2 >= 2;
+// console.log(greaterOrEqual) // true;
 
 // UWAGA: istnieją jeszcze dwa komparatory
 // specjalna równość ==
@@ -102,7 +102,7 @@ const anotherNonPrimitiveObject = {
 // Zanim przetestujemy naszego NaN, zobaczmy jak działa funkcja "typeof".
 // Odkomentuj poniższe 3 linijki i sprawdź, co pokaże console.log na konsoli:
 
-// const myValue = "Hello, I'm Maciek";
+// const myValue = NaN;
 // const typeofMyValue = typeof myValue;
 // console.log("my value is: ", typeofMyValue);
 
@@ -141,23 +141,23 @@ const reassignedArrayFunction = arrowFunction;
 
 // Odkomentuj na razie poniższe dwa konsole.logi i zobacz, co się stanie.
 
-/**
-* const isObjectEqualToObject = myObject === otherObject;
-* console.log("isObjectEqualToObject: ", isObjectEqualToObject);
-*
-* const isObjectEqualToItself = myObject === myObject;
-* console.log("isObjectEqualToItself: ", isObjectEqualToItself);
-*/
+
+// const isObjectEqualToObject = myObject === otherObject;
+// console.log("isObjectEqualToObject: ", isObjectEqualToObject);
+
+// const isObjectEqualToItself = myObject === myObject;
+// console.log("isObjectEqualToItself: ", isObjectEqualToItself);
+
 
 // dziwne, co? obiekt jest równy samemu sobie, ale nie jest równy innemu takiemu samemu obiektowi.
 // Na razie możesz się temu dziwić, ale nie musisz próbować tego zapamiętać. Patrz, co będzie dalej!
 // Sprawdzimy teraz, co się stanie jak porównany dwa osobne obiekty, z których jeden został utworzony
 // jako "array literal", a drugi został utworzony przez przypisanie poprzedniego. Odkomentuj:
 
-/**
- * const isObjectEqualToReassignedObject = myArray === reassignedArray;
- * console.log("isObjectEqualToReassignedObject", isObjectEqualToReassignedObject);
- */
+
+// const isObjectEqualToReassignedObject = myArray === reassignedArray;
+// console.log("isObjectEqualToReassignedObject", isObjectEqualToReassignedObject);
+
 
 // Dobre, nie? Po pierwsze, możesz się zdziwić dlaczego piszę "obiekt" a używam tablicy (array'a);
 // To dlatego, że arraye tak naprawdę są obiektami. Gdybym w tym przykładzie użył klasycznego obiektu {},
@@ -178,14 +178,14 @@ const objectLiteralSecond = {};
 // to wynika z tego, że obiekt i jego klon to TEN SAM OBIEKT! WOW!
 // Nie bardzo rozumiesz, co mam na myśli? Spójrz niżej (odkomentuj):
 
-/** 
-const thisIsPrimaryObject = {
-    value: 1
-}
-const thisIsClone = thisIsPrimaryObject
-thisIsClone.value = "Hello";
-console.log(thisIsPrimaryObject)
-*/
+
+// const thisIsPrimaryObject = {
+//     value: 1
+// }
+// const thisIsClone = thisIsPrimaryObject
+// thisIsClone.value = "Hello";
+// console.log(thisIsPrimaryObject)
+
 
 // Whoaaaaaaaaaaaaaaaa... To się zachowuje inaczej, niż wartości prymitywne!
 // Pamiętasz? Gdy re-assignowałaś wartość prymitywną do nowej wartości, mogłaś odtąd obie wartości
@@ -212,20 +212,20 @@ console.log(myName) // output: Maciek;
 
 // Whoa, nieźle, nie? Sprawdźmy (odkomentuj):
 
-/**
-const myFunction = () => { };
-const functionClone = myFunction;
-console.log("myFunction === functionClone", myFunction === functionClone);
-*/
 
-// To teraz sprawdźmy tak:
-/**
-const testObject = {
-    myFunction
-}
-console.log("testObject.myFunction === myFunction", testObject.myFunction === myFunction);
-console.log("testObject.myFunction === functionClone", testObject.myFunction === functionClone);
-*/
+// const myFunction = () => { };
+// const functionClone = myFunction;
+// console.log("myFunction === functionClone", myFunction === functionClone);
+
+
+// // To teraz sprawdźmy tak:
+
+// const testObject = {
+//     myFunction
+// }
+// console.log("testObject.myFunction === myFunction", testObject.myFunction === myFunction);
+// console.log("testObject.myFunction === functionClone", testObject.myFunction === functionClone);
+
 
 // Widzisz? Powyżej nasza funkcja "JEST WSKAZYWANA" aż przez trzy wskaźniki: functionClone, myFunction, testObject.myFunction
 // Tylko raz użyliśmy syntaksu "funciton literal", a potem "rozpropagowaliśmy" tę funkcję do aż 3 zmiennych (dwa consty i jedno pole obiektu). 
@@ -253,7 +253,7 @@ Person.children.push(Child);
 // dodałem sobie do mojej tablicy dziecko... 
 // Sprawdźmy, czy zadziałało (odkomentuj):
 
-/** console.log("Maciek po edycji: ", Person) */
+// console.log("Maciek po edycji: ", Person)
 
 // Widzisz, w tablicy dzieci mam obiekt Child (jeśli twoja konsola nie pokazuje wnętrza tablicy, spróbuj
 // zrobić może console.log(Person.children), zamiast console.log(Person)).
@@ -296,14 +296,14 @@ Person.children[0].computerBannedForWeekBecauseChildPlayedWithKnife = true;
 // TRZY WSKAŹNIKI: pierwszy wskaźnik to sam obiekt Person, drugi wskaźnik to obiekt Child, a trzeci wskaźnik to
 // pole Person.children, które też jest przecież zagnieżdżonym obiektem! Dobre, nie? Popatrz na to:
 
-/**
-const pointerToPerson = Person;
-const pointerToPersonChildren = Person.children;
-const pointerToChild = pointerToPerson.children[0];
-console.log(Child === pointerToChild);
-console.log(pointerToPerson === Person);
-console.log(pointerToPersonChildren === Person.children);
-*/
+
+// const pointerToPerson = Person;
+// const pointerToPersonChildren = Person.children;
+// const pointerToChild = pointerToPerson.children[0];
+// console.log(Child === pointerToChild);
+// console.log(pointerToPerson === Person);
+// console.log(pointerToPersonChildren === Person.children);
+
 
 // Popatrz sobie, pomedytuj nad powyższym, a przekonasz się, że powoli staje się to jasne: Nieważne ile razy
 // przypiszemy jakiś objekt z jednej zmiennej do drugiej, to ciągle będzie ten sam obiekt.
@@ -311,60 +311,60 @@ console.log(pointerToPersonChildren === Person.children);
 // będzie ten sam obiekt. Spójrz niżej, jak przypisuję wskaźnik na tę samą tablicę Person.children 
 // do stu milionów różnych miejsc:
 
-const myWeirdArray = Person.children;
-const myFancyArray = myWeirdArray;
-const myThirdArray = myFancyArray;
-const WrapperToHideArray = {
-    hidenArray: myThirdArray,
-}
-const DojebanyKurwaWrapperZebyNiktNieZnalazlJuzTamtejTablicy = {
-    pole1: {
-        pole2: {
-            jakasTablica: [
-                "a", "b", WrapperToHideArray
-            ]
-        }
-    }
-}
+// const myWeirdArray = Person.children;
+// const myFancyArray = myWeirdArray;
+// const myThirdArray = myFancyArray;
+// const WrapperToHideArray = {
+//     hidenArray: myThirdArray,
+// }
+// const DojebanyKurwaWrapperZebyNiktNieZnalazlJuzTamtejTablicy = {
+//     pole1: {
+//         pole2: {
+//             jakasTablica: [
+//                 "a", "b", WrapperToHideArray
+//             ]
+//         }
+//     }
+// }
 
-// i tera pa na to:
-// 1. odkopuję tę ukrytą tablicę:
-DojebanyKurwaWrapperZebyNiktNieZnalazlJuzTamtejTablicy.pole1.pole2.jakasTablica[2].hidenArray;
-// 2. ...i edytuję ukrytego w niej malca!
-DojebanyKurwaWrapperZebyNiktNieZnalazlJuzTamtejTablicy.pole1.pole2.jakasTablica[2].hidenArray[0].isChildHappy = true;
+// // i tera pa na to:
+// // 1. odkopuję tę ukrytą tablicę:
+// DojebanyKurwaWrapperZebyNiktNieZnalazlJuzTamtejTablicy.pole1.pole2.jakasTablica[2].hidenArray;
+// // 2. ...i edytuję ukrytego w niej malca!
+// DojebanyKurwaWrapperZebyNiktNieZnalazlJuzTamtejTablicy.pole1.pole2.jakasTablica[2].hidenArray[0].isChildHappy = true;
 // 3. ...i teraz sprawdzam nasz pierwotny, oryginalny obiekt Child (odkomentuj)!
 // console.log("Is Child happy? ", Child);
 
 // A teraz weźmy usuńmy tablicę children w oryginalnego obiektu Person, a także z naszego 
 // potężnego obiektu DojebanyKurwaWrapperZebyNiktNieZnalazlJuzTamtejTablicy i zobaczmy co się stanie:
 
-/**
-DojebanyKurwaWrapperZebyNiktNieZnalazlJuzTamtejTablicy.pole1.pole2.jakasTablica[2].hidenArray = null;
-Person.children = null;
-console.log(Person)
-console.log(DojebanyKurwaWrapperZebyNiktNieZnalazlJuzTamtejTablicy);
-*/
+
+// DojebanyKurwaWrapperZebyNiktNieZnalazlJuzTamtejTablicy.pole1.pole2.jakasTablica[2].hidenArray = null;
+// Person.children = null;
+// console.log(Person)
+// console.log(DojebanyKurwaWrapperZebyNiktNieZnalazlJuzTamtejTablicy);
+
 
 // ale tablica dalej istnieje w pamięci, bo dalej mamy wskaźniki na nią wskazujące:
 
-/**
-console.log("myWeirdArray", myWeirdArray);
-console.log("myFancyArray", myFancyArray);
-console.log("myThirdArray", myThirdArray);
-console.log("WrapperToHideArray", WrapperToHideArray);
-*/
+
+// console.log("myWeirdArray", myWeirdArray);
+// console.log("myFancyArray", myFancyArray);
+// console.log("myThirdArray", myThirdArray);
+// console.log("WrapperToHideArray", WrapperToHideArray);
+
 
 // I jeśli nie dość ci gimnastyki umysłu, to sprawdźmy co się stanie jak usunę pierwotny
 // obiekt Child. Pamiętasz, że definiowałem go przy pomocy "let"? Dzięki temu zmienną Child
 // mogę dowolnie edytować. Zróbmy coś takiego:
-Child = null
+// Child = null
 // I co nam to dało?
 // Otóż samo Child już nie wskazuje na obiekt, ale pozostałe wskaźniki wciąż wskazują na obiekt! Odkomentuj!:
 
-/**
-console.log("Child is null now: ", Child);
-console.log("but other pointers still point to object in memory: ", myWeirdArray[0])
-*/
+
+// console.log("Child is null now: ", Child);
+// console.log("but other pointers still point to object in memory: ", myWeirdArray[0])
+
 
 // Podsumowując, tak to już jest ze zmiennymi NIE-prymitywnymi. Wszystkie one są tylko wskaźnikiem
 // (pointerem, referencją) odsyłającym do obiektu utworzonego w pamięci. To się tyczy obiektów, tablic i funkcji...
@@ -383,24 +383,39 @@ console.log("but other pointers still point to object in memory: ", myWeirdArray
 // oto lista komparatorów, jeśli zapomniałaś: ===, !==, >=, <=, >, <
 
 // propozycje grzeczne. Jak myślisz, co będzie gdy wykonsolujesz poszczególne wartości?:
-const isNumberGreaterThanBoolean = 4 > true;
-const isNumberEqualToBoolean = 1 === true;
-const isNullGreaterThanNull = null > null;
-const isStringGreaterThanOtherString = "aaa" > "a"
-const isStringLesserThanString = "a" < "b";
+// const isZeroGreaterThanBoolean = 0 > false;
+// const isZeroLesserThanBoolean = 0 < false;
+// const isZeroEqualBoolean = 0 === false;
+// const isZeroNotEqualBoolean = 0 !== false;
+// const isZeroGreaterEqualBoolean = 0 >= false;
+// const isZeroLesserEqualBoolean = 0 <= false;
+// const isNumberEqualToBoolean = 1 === true;
+// const isNullGreaterThanNull = null > null;
+// const isStringGreaterThanOtherString = "bbb" > "aa"
+// const isStringLesserThanString = "a" > "b";
+// const isNumberLesserThanBoolean = 1 < false;
+// console.log('Zero comparison', isZeroGreaterThanBoolean, isZeroLesserThanBoolean, isZeroEqualBoolean, isZeroNotEqualBoolean, isZeroGreaterEqualBoolean, isZeroLesserEqualBoolean);
+// console.log(isNumberEqualToBoolean);
 
 // propozycje niegrzeczne (te może warto sobie wykonsolować zanim je skasujesz, bo dzieją się tu rzeczy ciekawe).
 // Jak myślisz, dlaczego każdy z poniższych przykładów zwraca takiego a nie innego booleana?
-function justGiveMeBackMyArgument(anyArgument) {
-    return anyArgument
-}
-const myFunctionClone = justGiveMeBackMyArgument;
+// function justGiveMeBackMyArgument(anyArgument) {
+//     return anyArgument
+// }
+// const myFunctionClone = justGiveMeBackMyArgument;
 
-const isFunctionEqualToItsCall = myFunctionClone === justGiveMeBackMyArgument();
-const isCallEqualToCall = myFunctionClone("hello") === justGiveMeBackMyArgument("hello");
-const isCallEqualToCallForObjectLiteralArg = myFunctionClone({}) === justGiveMeBackMyArgument({});
-const pointerToSameObject = {}
-const isCallEqualToCallForObjectPointerArg = myFunctionClone(pointerToSameObject) === justGiveMeBackMyArgument(pointerToSameObject);
+// const isFunctionEqualToItsCall = myFunctionClone === justGiveMeBackMyArgument();
+// console.log('isFunctionEqualToItsCall', isFunctionEqualToItsCall);
+
+// const isCallEqualToCall = myFunctionClone("hello") === justGiveMeBackMyArgument("hello");
+// console.log('isCallEqualToCall', isCallEqualToCall);
+
+// const isCallEqualToCallForObjectLiteralArg = myFunctionClone({}) === justGiveMeBackMyArgument({});
+// console.log('isCallEqualToCallForObjectLiteralArg', isCallEqualToCallForObjectLiteralArg);
+
+// const pointerToSameObject = {}
+// const isCallEqualToCallForObjectPointerArg = myFunctionClone(pointerToSameObject) === justGiveMeBackMyArgument(pointerToSameObject);
+// console.log('isCallEqualToCallForObjectPointerArg', isCallEqualToCallForObjectPointerArg);
 
 // Dobrze, dobrze, dosyć tego!
 // Teraz zapominamy już o wartościach nie-prymitywnych i przechodzimy do ćwiczenia 
@@ -412,30 +427,65 @@ const isCallEqualToCallForObjectPointerArg = myFunctionClone(pointerToSameObject
 // "Jaś ma zielone oczy, Małgosia - niebieskie. Jeśli ich dziecko będzie córką, to jeśli będzie miało oczy matki, to
 // będzie się nazywać Krysia, a jeśli oczy ojca, to Janina. A jeśli będzie chłopcem, to będzie się nazywać Zbigniew."
 // A oto program w języku komputerów, który nadaje dziecku imię:
-const availableEyesColor = {
-    mother: 'blue',
-    father: 'green'
-}
-const availableGenders = ['male', 'female', 'military tank t-49'];
+
+//     boy -> "Zbigniew"
+//     girl ->
+//         blueEyesFromMom -> "Krysia"
+//         greenEyesFromDad -> "Janina"
 
 
-const whatName = (childEyes, childGender) => {
 
-    if (childGender === availableGenders[0]) { // Jest chłopcem!
-        return 'Zbigniew'
-    } else if (childGender === availableGenders[1]) { // Jest dziewczynką!
-        if (childEyes === availableEyesColor.mother) { // Jest dziewczynką z oczami po matce
-            return 'Krysia'
+const newbornGender = "cos";
+const newbornEyesColor = "green"; // zdecydowanie moglam tu pojsc w obiekt, ale zostawiam moj pierwszy pomysl jako dowod na improvement xD
+
+const gender = ['boy', 'girl'];
+
+const eyes = {
+    fromMom: "blue",
+    fromDad: "green"
+};
+
+function whatsMyName () {
+    if (newbornGender === gender[0]) {
+        return "Zbigniew";
+    } else if (newbornGender === gender[1]) {
+        if (newbornEyesColor === eyes.fromMom) {
+            return "Krysia";
+        } else if (newbornEyesColor === eyes.fromDad) { // moze faktycznie ten warunek jest niepotrzebny
+            return "Janina";
         }
-        // Jest dziewczynką, ale nie ma oczu po matce. Więc... MUSI mieć oczy ojca.
-        return 'Janina'
     }
-
-    // Jeśli tu dotrze, to nie jest ani chłopcem, ani dziewczynką:
-    return "error!!!!!!"
+    return "Psikus"
 }
 
-// odkomentuj poniższe console.logi i zobacz jak ten program działa:
+console.log("Newborn's name is", whatsMyName(newbornGender, newbornEyesColor));
+
+// Rozwiazanie od Macka
+///////////////////////////
+// 
+// const availableEyesColor = {
+//     mother: 'blue',
+//     father: 'green'
+// }
+// const availableGenders = ['male', 'female', 'military tank t-49'];
+
+// const whatName = (childEyes, childGender) => {
+
+//     if (childGender === availableGenders[0]) { // Jest chłopcem!
+//         return 'Zbigniew'
+//     } else if (childGender === availableGenders[1]) { // Jest dziewczynką!
+//         if (childEyes === availableEyesColor.mother) { // Jest dziewczynką z oczami po matce
+//             return 'Krysia'
+//         }
+//         // Jest dziewczynką, ale nie ma oczu po matce. Więc... MUSI mieć oczy ojca.
+//         return 'Janina'
+//     }
+
+//     // Jeśli tu dotrze, to nie jest ani chłopcem, ani dziewczynką:
+//     return "error!!!!!!"
+// }
+
+// // odkomentuj poniższe console.logi i zobacz jak ten program działa:
 // console.log(`Boy with mother's eyes: ${whatName(availableEyesColor.mother, availableGenders[0])}.`)
 // console.log(`Girl with mother's eyes: ${whatName(availableEyesColor.mother, availableGenders[1])}.`)
 // console.log(`Girl with father's eyes: ${whatName(availableEyesColor.father, availableGenders[1])}.`)
@@ -470,6 +520,12 @@ const whatName = (childEyes, childGender) => {
 // resoleSurname, tak aby ona zwracała poprawne nazwisko (string), i w efekcie żeby porównania na samym dole 
 // w konsole logach działały jak trzeba.
 
+// Co wiemy:
+// syn -> oczy matki -> nazwisko matki
+// corka -> oczy matki -> nazwisko matki
+// syn -> oczy ojca -> nazwisko ojca
+// corka -> oczy ojca -> nazwisko matki+ojca
+
 const mother = {
     surname: 'Nowak',
     eyes: 'blue'
@@ -482,15 +538,25 @@ const father = {
 
 const possibleGenders = ['male', 'female'];
 
+
 function resolveSurname(child) {
-    if (child.eyes === mother.eyes) { // jesli ma oczy matki, to co?
 
-    } else { // a jeśli ma oczy inne niż matki, to co?
+    if (child.eyes === mother.eyes) {
+        if (child.gender === possibleGenders[0]) {
+            return mother.surname;
+        } else if (child.gender === possibleGenders[1]) {
+            return mother.surname;
+        }
 
+    } else if (child.eyes === father.eyes) {
+        if (child.gender === possibleGenders[0]) {
+            return father.surname;
+        } else if (child.gender === possibleGenders[1]) {
+            return `${mother.surname}-${father.surname}`;
+        }
     }
+}
 
-    // dotąd funkcja nie dotrze: wpadnie albo w if, albo w else!
- }
 
 const boyWithMothersEyes = {
     gender: 'male',
@@ -509,7 +575,7 @@ const girlWithMothersEyes = {
     eyes: mother.eyes,
 }
 
-// console.log(`Surname for boy with mothers eyes is Nowak. ${resolveSurname(boyWithMothersEyes) === 'Nowak'}`)
-// console.log(`Surname for boy with fathers eyes is Kowalski. ${resolveSurname(boyWithFathersEyes) === 'Kowalski'}`)
-// console.log(`Surname for girl with mothers eyes is Nowak. ${resolveSurname(girlWithMothersEyes) === 'Nowak'}`)
-// console.log(`Surname for girl with fathers eyes is Nowak-Kowalski. ${resolveSurname(girlWithFathersEyes) === 'Nowak-Kowalski'}`)
+console.log(`Surname for boy with mothers eyes is Nowak. ${resolveSurname(boyWithMothersEyes) === 'Nowak'}`)
+console.log(`Surname for boy with fathers eyes is Kowalski. ${resolveSurname(boyWithFathersEyes) === 'Kowalski'}`)
+console.log(`Surname for girl with mothers eyes is Nowak. ${resolveSurname(girlWithMothersEyes) === 'Nowak'}`)
+console.log(`Surname for girl with fathers eyes is Nowak-Kowalski. ${resolveSurname(girlWithFathersEyes) === 'Nowak-Kowalski'}`)

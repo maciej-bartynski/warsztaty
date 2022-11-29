@@ -404,18 +404,19 @@ const whatName = (childEyes, childGender) => {
   if (childGender === availableGenders[0]) {
     // Jest chłopcem!
     return "Zbigniew";
-  } else if (childGender === availableGenders[1])
+  } else if (childGender === availableGenders[1]) {
+    // Jest dziewczynką!
     if (childEyes === availableEyesColor.mother) {
-      // Jest dziewczynką!
       // Jest dziewczynką z oczami po matce
       return "Krysia";
     }
-  // Jest dziewczynką, ale nie ma oczu po matce. Więc... MUSI mieć oczy ojca.
-  return "Janina";
-};
+    // Jest dziewczynką, ale nie ma oczu po matce. Więc... MUSI mieć oczy ojca.
+    return "Janina";
+  }
 
-// // Jeśli tu dotrze, to nie jest ani chłopcem, ani dziewczynką:
-return "error!!!!!!";
+  // Jeśli tu dotrze, to nie jest ani chłopcem, ani dziewczynką:
+  return "error!!!!!!";
+};
 
 // odkomentuj poniższe console.logi i zobacz jak ten program działa:
 console.log(`Boy with mother's eyes: ${whatName(availableEyesColor.mother, availableGenders[0])}.`);
@@ -469,16 +470,16 @@ function resolveSurname(child, childGender) {
     if (child.eyes === mother.eyes) {
       // jesli ma oczy matki, to co?
       return mother.surname;
-    } else if ((child.eyes = father.eyes)) {
+    } else if (child.eyes == father.eyes) {
       return father.surname;
       // a jeśli ma oczy inne niż matki, to co?
-    } else if (childGender == possibleGenders[1]);
+    }
+  if (childGender == possibleGenders[1]);
   if (child.eyes === mother.eyes) {
     // jesli ma oczy matki, to co?
     return mother.surname;
-  } else if ((child.eyes = father.eyes)) {
-    return mother.surname - father.surname;
-  }
+  } else child.eyes == father.eyes;
+  return mother.surname - father.surname;
 }
 
 // dotąd funkcja nie dotrze: wpadnie albo w if, albo w else!
